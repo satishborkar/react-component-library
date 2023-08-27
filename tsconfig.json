@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         /* Visit https://aka.ms/tsconfig to read more about this file */
+        // Reference of Code
+        // https://www.youtube.com/watch?v=V_5ImTOmMh0&t=1089s
 
         "allowSyntheticDefaultImports": true,
         "declaration": true,

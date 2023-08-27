@@ -1,3 +1,3 @@
-# @satishborkar/react-component-library
+# @react-slices/components
 
 React Component library

@@ -13,8 +13,8 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
     /**
      * Override defaults
      * **/
-    if (backgroundColor) _style.backgroundColor = backgroundColor;
-    if (color) _style.color = color;
+    if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
+    if (color && _style) _style.color = color;
 
     return (
         <button style={_style} {...props}>
