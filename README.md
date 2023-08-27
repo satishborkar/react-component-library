@@ -1,7 +1,3 @@
-# react_component_library
+# @satishborkar/react-component-library
 
 React Component library
-
-## Reference
-
--   https://www.youtube.com/watch?v=V_5ImTOmMh0&t=1087s
