@@ -13,8 +13,12 @@
     ],
     "scripts": {
         "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
-        "build:esm": "tsc",
-        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+        "build:esm": "tsc && npm run copyfiles:esm",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs && npm run copyfiles:cjs",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build",
+        "copyfiles:cjs": "copyfiles -u 1 src/**/**/*.css dist/cjs",
+        "copyfiles:esm": "copyfiles -u 1 src/**/**/*.css dist/esm"
     },
     "keywords": [
         "React",
@@ -23,11 +27,24 @@
     "author": "@satishborkar",
     "license": "MIT",
     "devDependencies": {
+        "@babel/preset-env": "^7.22.10",
+        "@babel/preset-react": "^7.22.5",
+        "@babel/preset-typescript": "^7.22.11",
+        "@storybook/addon-essentials": "^7.3.2",
+        "@storybook/addon-interactions": "^7.3.2",
+        "@storybook/addon-links": "^7.3.2",
+        "@storybook/addon-onboarding": "^1.0.8",
+        "@storybook/blocks": "^7.3.2",
+        "@storybook/react": "^7.3.2",
+        "@storybook/react-webpack5": "^7.3.2",
+        "@storybook/testing-library": "^0.2.0",
         "@types/node": "^20.5.6",
         "@types/react": "^18.2.21",
         "@types/react-dom": "^18.2.7",
+        "copyfiles": "^2.4.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "storybook": "^7.3.2",
         "typescript": "^5.2.2"
     },
     "peerDependencies": {

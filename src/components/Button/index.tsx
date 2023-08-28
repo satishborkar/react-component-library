@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/button.css';
 
 export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     backgroundColor?: string;
@@ -17,7 +18,7 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
     if (color && _style) _style.color = color;
 
     return (
-        <button style={_style} {...props}>
+        <button className={`button`} style={_style} {...props}>
             {label || children}
         </button>
     );
