@@ -13,9 +13,7 @@ const meta: any = {
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-    argTypes: {
-        style: { control: 'color' }
-    }
+    argTypes: {}
 } satisfies Meta<typeof CopyToClipboardIcon>;
 
 export default meta;
@@ -24,13 +22,18 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
     args: {
-        text: 'Button 001'
+        text: 'Button 001',
+        title: 'This is 001',
+        style: {
+            color: 'red'
+        }
     }
 };
 
 export const Secondary: Story = {
     args: {
-        text: 'Button 002'
+        text: 'Button 002',
+        inline: true
     }
 };
 

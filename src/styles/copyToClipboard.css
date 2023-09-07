@@ -8,6 +8,14 @@
     z-index: 100;
 }
 
+.grid-column-copy-to-clipboard.inline-icon {
+    display: inline-block;
+    position: static;
+    top: initial;
+    left: initial;
+    transform: translate(5px 5px);
+}
+
 .hide-initially {
     opacity: 0;
 }

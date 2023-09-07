@@ -8,8 +8,9 @@ interface ICopyToClipboardIconProps {
     containerClass?: string;
     iconClass?: string;
     style?: React.CSSProperties;
-    //displayInline?: Boolean;
+    inline?: Boolean;
     title?: string;
+    children?: React.ReactNode;
 }
 
 /******
@@ -19,7 +20,7 @@ interface ICopyToClipboardIconProps {
  * ******/
 
 export const CopyToClipboardIcon: React.FunctionComponent<ICopyToClipboardIconProps> = (props) => {
-    const { text, containerClass, iconClass, style, /*displayInline*/ title } = props;
+    const { text, containerClass, iconClass, style, inline, title, children } = props;
     const [copied, setCopied] = useState(false);
 
     useEffect(() => {
@@ -31,7 +32,7 @@ export const CopyToClipboardIcon: React.FunctionComponent<ICopyToClipboardIconPr
 
     if (!copied && text !== null) {
         return (
-            <div className={['grid-column-copy-to-clipboard', containerClass].join(' ')} style={style}>
+            <div className={['grid-column-copy-to-clipboard', containerClass, inline && 'inline-icon'].join(' ')} style={style}>
                 <CopyToClipboard
                     text={text}
                     onCopy={() => setCopied(true)}
@@ -39,7 +40,7 @@ export const CopyToClipboardIcon: React.FunctionComponent<ICopyToClipboardIconPr
                     title={title || 'Click to copy content'}
                     className={['cursor-pointer copy-to-clipboard-icon flip-horizontal', iconClass].join(' ')}
                 >
-                    <IoIosBrowsers />
+                    {children ? children : <IoIosBrowsers />}
                 </CopyToClipboard>
             </div>
         );
