@@ -17,3 +17,19 @@ Example with children
     Copy Text or your icon
 </CopyToClipboardIcon>
 ```
+
+-   `Button`
+
+```javascript
+import { Button } from '@react-slices/components';
+
+<Button label={'Button Initial Label'} hoverText={'Text on hover'} containerClassName="" buttonClassName="" style={{ color: 'red' }} />;
+```
+
+Example with children
+
+```javascript
+<Button text={'text to copy onclick'} containerClassName="" buttonClassName="">
+    any child
+</Button>
+```

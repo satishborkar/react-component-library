@@ -17,7 +17,7 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
         <div className="hover-button">
             <button className={['btn', buttonClassName].join(' ')} style={style} {...props}>
                 <span className={buttonClassName} data-hover={hoverText || label}>
-                    {label || children}
+                    <>{label || children}</>
                 </span>
             </button>
         </div>
