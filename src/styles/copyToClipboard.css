@@ -1,0 +1,30 @@
+.grid-column-copy-to-clipboard {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    color: darkgray;
+    opacity: 1;
+    transition: all ease-in 200ms;
+    z-index: 100;
+}
+
+.hide-initially {
+    opacity: 0;
+}
+
+.copy-to-clipboard-container {
+    position: relative;
+}
+
+.copy-to-clipboard-container:hover .grid-column-copy-to-clipboard {
+    opacity: 0.5;
+}
+
+.copy-to-clipboard-icon:hover,
+.copy-to-clipboard-icon:focus {
+    color: black;
+}
+
+.flip-horizontal {
+    transform: rotate(180deg);
+}
