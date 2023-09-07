@@ -1,5 +1,103 @@
-.button {
-    border: 1px solid #ccc;
-    padding: 12px 18px;
-    border-radius: 4px;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+.hover-button {
+    display: inline-block;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hover-button * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.hover-button *:before,
+.hover-button *:after {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.hover-button .btn {
+    font: 700 18px/50px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border: none;
+    perspective: 800px;
+
+    -moz-perspective: 800px;
+    -webkit-perspective: 800px;
+    -o-perspective: 800px;
+}
+
+.hover-button .btn span {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background: #567;
+    box-shadow: inset 0 3px #345;
+    transition: background 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+
+    -moz-transition: background 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin: 0% 50%;
+
+    -webkit-transition: background 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+
+
+    -o-transition: background 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform-origin: 0% 50%;
+
+}
+
+.hover-button .btn span::before {
+    content: attr(data-hover);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background: #fff;
+    color: #aaa;
+    box-shadow: inset 0 3px #aaa;
+    transform: rotateX(270deg);
+    transition: transform 0.6s;
+    transform-origin: 0 0;
+
+    -moz-transform: rotateX(270deg);
+    -moz-transition: transform 0.6s;
+    -moz-transform-origin: 0 0;
+
+
+    -webkit-transform: rotateX(270deg);
+    -webkit-transition: transform 0.6s;
+    -webkit-transform-origin: 0 0;
+
+    -o-transform: rotateX(270deg);
+    -o-transition: transform 0.6s;
+    -o-transform-origin: 0 0;
+
+}
+
+.hover-button .btn:hover span::before,
+.hover-button .btn:focus span::before {
+    transform: rotateX(10deg);
+    -moz-transform: rotateX(10deg);
+    -webkit-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
 }

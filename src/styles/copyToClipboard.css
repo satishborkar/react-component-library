@@ -32,7 +32,3 @@
 .copy-to-clipboard-icon:focus {
     color: black;
 }
-
-.flip-horizontal {
-    transform: rotate(180deg);
-}

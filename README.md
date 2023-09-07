@@ -4,24 +4,16 @@ React helper components for small functionalities and some CSS interactive modif
 
 -   `CopyToClipboardIcon`
 
-```
-<CopyToClipboardIcon
-   text={'text to copy onclick'}
-   containerClass='abc'
-   iconClass='cba'
-   style={{color:'red'}}
-   inline={true|| false}
-/>
+```javascript
+import { CopyToClipboardIcon } from '@react-slices/components';
+
+<CopyToClipboardIcon text={'text to copy onclick'} containerClassName="" iconClassName="" style={{ color: 'red' }} inline={true || false} />;
 ```
 
 Example with children
 
-```
-<CopyToClipboardIcon
-    text={'text to copy onclick'}
-    containerClass='abc'
-    iconClass='cba'
-    >
+```javascript
+<CopyToClipboardIcon text={'text to copy onclick'} containerClassName="" iconClassName="">
     Copy Text or your icon
 </CopyToClipboardIcon>
 ```
